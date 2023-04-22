@@ -54,7 +54,7 @@ async def start_vc(event):
         await zedub(
             functions.phone.CreateGroupCallRequest(
                 peer=vc_chat,
-                title="سورس سيمو",
+                title="سورس كرستين",
             )
         )
         await edit_delete(event, "Started Group Call")
@@ -126,8 +126,8 @@ async def inv_vc(event):
 
 
 @zedub.zed_cmd(
-    pattern="مين فوق",
-    command=("مين فوق", plugin_category),
+    pattern="مين في الكول",
+    command=("مين في الكول", plugin_category),
     info={
         "header": "To get info of Voice Chat.",
         "usage": "{tr}vcinfo",
