@@ -9,7 +9,7 @@ from zthon.core.managers import edit_delete, edit_or_reply
 
 from .helper.stream_helper import Stream
 from .helper.tg_downloader import tg_dl
-from .helper.vcp_helper import CatVC
+from .helper.vcp_helper import crvc
 
 plugin_category = "extra"
 
@@ -27,7 +27,7 @@ else:
     vc_client = zedub
 
 vc_client.__class__.__module__ = "telethon.client.telegramclient"
-vc_player = CatVC(vc_client)
+vc_player = crvc(vc_client)
 
 asyncio.create_task(vc_player.start())
 
@@ -69,7 +69,7 @@ async def joinVoicechat(event):
     chat = event.pattern_match.group(1)
     joinas = event.pattern_match.group(2)
 
-    await edit_or_reply(event, "حاضر طالع اهو متزعقش 🥺")
+    await edit_or_reply(event, "حاضر طالع اهو متزعقش🥺")
 
     if chat and chat != "-as":
         if chat.strip("-").isnumeric():
@@ -154,7 +154,7 @@ async def get_playlist(event):
                 cat += f"{num}. 🔉  `{item['title']}`\n"
             else:
                 cat += f"{num}. 📺  `{item['title']}`\n"
-        await edit_delete(event, f"**القايمه:**\n\n{cat}\n**𓏺سۅٛࢪس سيمو يتمڼي ݪڪم ۅٛقت سعيد**")
+        await edit_delete(event, f"**القايمه:**\n\n{cat}\n**𓏺سۅٛࢪس ڪࢪستيڼ يتمڼي ݪڪم ۅٛقت سعيد**")
 
 
 @zedub.zed_cmd(
@@ -192,7 +192,7 @@ async def play_video(event):
         return await edit_or_reply(event, "Join a VC and use play command")
     if not input_str:
         return await edit_or_reply(event, "No Input to play in vc")
-    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @FTTUTY")
+    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @pp_g3")
     if flag:
         resp = await vc_player.play_song(input_str, Stream.video, force=True)
     else:
@@ -236,7 +236,7 @@ async def play_audio(event):
         return await edit_or_reply(event, "Join a VC and use play command")
     if not input_str:
         return await edit_or_reply(event, "No Input to play in vc")
-    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @FTTUTY")
+    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @pp_g3")
     if flag:
         resp = await vc_player.play_song(input_str, Stream.audio, force=True)
     else:
