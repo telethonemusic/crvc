@@ -27,7 +27,7 @@ else:
     vc_client = zedub
 
 vc_client.__class__.__module__ = "telethon.client.telegramclient"
-vc_player = crvc(vc_client)
+vc_player = semovc(vc_client)
 
 asyncio.create_task(vc_player.start())
 
