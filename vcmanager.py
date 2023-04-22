@@ -126,8 +126,8 @@ async def inv_vc(event):
 
 
 @zedub.zed_cmd(
-    pattern="مين في الكول",
-    command=("مين في الكول", plugin_category),
+    pattern="مين فوق",
+    command=("مين فوق", plugin_category),
     info={
         "header": "To get info of Voice Chat.",
         "usage": "{tr}vcinfo",
