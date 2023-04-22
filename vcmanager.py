@@ -113,8 +113,7 @@ async def inv_vc(event):
     entities = str(users).split(" ")
     user_list = []
     for entity in entities:
-
-cc = await parse_entity(entity)
+        cc = await parse_entity(entity)
         if isinstance(cc, User):
             user_list.append(cc)
     try:
@@ -145,15 +144,15 @@ async def info_vc(event):
     call_details = await zedub(
         functions.phone.GetGroupCallRequest(call=gc_call, limit=1)
     )
-    grp_call = "معلومات المكالمه\n\n"
-    grp_call += f"العنوان : {call_details.call.title}\n"
-    grp_call += f"عددهمt : {call_details.call.participants_count}\n\n"
+    grp_call = "**معلومات المكالمه**\n\n"
+    grp_call += f"**العنوان :** {call_details.call.title}\n"
+    grp_call += f"**عددهمt :** {call_details.call.participants_count}\n\n"
 
     if call_details.call.participants_count > 0:
-        grp_call += "ال في كول\n"
+        grp_call += "**ال في كول**\n"
         for user in call_details.users:
             nam = f"{user.first_name or ''} {user.last_name or ''}"
-            grp_call += f"  ● {mentionuser(nam,user.id)} - {user.id}\n"
+            grp_call += f"  ● {mentionuser(nam,user.id)} - `{user.id}`\n"
     await edit_or_reply(event, grp_call)
 
 
@@ -176,7 +175,7 @@ async def title_vc(event):
     if not title:
         return await edit_delete("What should i keep as title")
     await zedub(functions.phone.EditGroupCallTitleRequest(call=gc_call, title=title))
-    await edit_delete(event, f"VC title was changed to {title}")
+    await edit_delete(event, f"VC title was changed to **{title}**")
 
 
 @zedub.zed_cmd(
