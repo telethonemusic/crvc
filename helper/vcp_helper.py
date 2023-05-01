@@ -1,3 +1,4 @@
+# امسك حرامي 🌚😹
 import asyncio
 from pathlib import Path
 
