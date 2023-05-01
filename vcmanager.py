@@ -1,3 +1,4 @@
+# بموووت ضحك 😹
 from telethon import functions
 from telethon.errors import ChatAdminRequiredError, UserAlreadyInvitedError
 from telethon.tl.types import Channel, Chat, User
