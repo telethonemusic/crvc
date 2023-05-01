@@ -1,3 +1,4 @@
+# يحرامي 😹
 import asyncio
 import io
 import os
