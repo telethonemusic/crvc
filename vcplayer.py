@@ -1,3 +1,4 @@
+# اسرق اسرق 😹
 import asyncio
 import logging
 
@@ -192,7 +193,7 @@ async def play_video(event):
         return await edit_or_reply(event, "Join a VC and use play command")
     if not input_str:
         return await edit_or_reply(event, "No Input to play in vc")
-    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @FTTUTY")
+    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️")
     if flag:
         resp = await vc_player.play_song(input_str, Stream.video, force=True)
     else:
@@ -236,7 +237,7 @@ async def play_audio(event):
         return await edit_or_reply(event, "Join a VC and use play command")
     if not input_str:
         return await edit_or_reply(event, "No Input to play in vc")
-    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️\n\n- قناة السورس : @FTTUTY")
+    await edit_or_reply(event, "- تم التشغيل .. بنجـاح 🎧♥️")
     if flag:
         resp = await vc_player.play_song(input_str, Stream.audio, force=True)
     else:
