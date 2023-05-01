@@ -1,1 +1,1 @@
-py-tgcalls==0.9.11
+py-tgcalls==0.9.1
